@@ -1,0 +1,2 @@
+jojo = 'MOSKAU!!!!!!!!!!!!!!!!!!!!!!!'
+waamu = 'edgyu'
