@@ -17,11 +17,19 @@ if not os.path.exists('Graphs'):
 ## Creating boxplots and histograms ##
 
 # get samples
-# TODO: copy the code snippet from the lab instruction that draws samples
+mean = 0
+std = 1
+samples = 1000
+
+mySamples = np.random.normal(mean, std, samples)
+mySamples2 = np.random.normal(mean, std, samples)
 
 # visualize samples
 # histograms
-# TODO: copy the code snippet from the lab instruction that creates histograms
+plt.hist(mySamples, bins=np.arange(-4,4,0.25), density=True)
+fileName = "Graphs/Change_Me.png"
+plt.savefig(fileName)
+plt.close()
 
 # boxplots
 # TODO: copy the code snippet from the lab instruction that creates boxplots
