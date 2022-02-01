@@ -59,7 +59,7 @@ def makeHist(mySamples, binSize = np.arange(-5,5,0.1), fileName='histogram.png')
     '''
 
     plt.hist(mySamples, bins=binSize, density=True)
-    plt.savefig(fileName)
+    plt.savefig("Graphs/" + fileName)
     plt.close()
 
 
@@ -78,7 +78,7 @@ def makeBoxplot(mySamplesL, fileName='boxplot.png'):
     '''
 
     plt.boxplot(mySamplesL, notch=True)
-    plt.savefig(fileName)
+    plt.savefig("Graphs/" + fileName)
     plt.close()
 
 
@@ -103,7 +103,14 @@ def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.a
     --
     None, but creates histograms and a boxplot
     '''
-    pass
+    samples = []
+    for i in range(0,trials-1):
+        temp = np.random.normal(mean, sd, sampleSize)
+
+        samples.append(temp)
+        makeHist(temp, binSize, ("normal" + str(i) + ".png"))
+
+    makeBoxplot(samples, "cumulative_normals.png")
 
 
 if __name__ == '__main__':
