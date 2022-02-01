@@ -104,7 +104,7 @@ def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.a
     None, but creates histograms and a boxplot
     '''
     samples = []
-    for i in range(0,trials-1):
+    for i in range(0,trials):
         temp = np.random.normal(mean, sd, sampleSize)
 
         samples.append(temp)
