@@ -1,2 +1,0 @@
-jojo = 'MOSKAU!!!!!!!!!!!!!!!!!!!!!!!'
-waamu = 'edgyu'
