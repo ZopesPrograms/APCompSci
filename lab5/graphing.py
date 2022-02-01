@@ -114,4 +114,4 @@ def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.a
 
 
 if __name__ == '__main__':
-    pass # TODO: remove this once you add script code here!
+    repeatRandomSamples()
