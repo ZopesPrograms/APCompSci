@@ -32,7 +32,10 @@ plt.savefig(fileName)
 plt.close()
 
 # boxplots
-# TODO: copy the code snippet from the lab instruction that creates boxplots
+plt.boxplot([mySamples, mySamples2], notch=True)
+fileName = "Graphs/Change_Me2.png"
+plt.savefig(fileName)
+plt.close()
 
 
 
