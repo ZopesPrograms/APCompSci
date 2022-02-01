@@ -57,7 +57,10 @@ def makeHist(mySamples, binSize = np.arange(-5,5,0.1), fileName='histogram.png')
     --
     None, but saves a histogram
     '''
-    pass
+
+    plt.hist(mySamples, bins=binSize, density=True)
+    plt.savefig(fileName)
+    plt.close()
 
 
 def makeBoxplot(mySamplesL, fileName='boxplot.png'):
@@ -73,7 +76,10 @@ def makeBoxplot(mySamplesL, fileName='boxplot.png'):
     --
     None, but saves a boxplot
     '''
-    pass
+
+    plt.boxplot(mySamplesL, notch=True)
+    plt.savefig(fileName)
+    plt.close()
 
 
 def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.arange(-5,5,0.1)):
