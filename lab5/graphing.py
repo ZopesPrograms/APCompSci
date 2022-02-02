@@ -26,7 +26,7 @@ mySamples2 = np.random.normal(mean, std, samples)
 
 # visualize samples
 # histograms
-plt.hist(mySamples, bins=np.arange(-4,4,0.25), density=True)
+plt.hist(mySamples, bins=np.arange(-4,4,0.25), density=False)
 fileName = "Graphs/Change_Me.png"
 plt.savefig(fileName)
 plt.close()
