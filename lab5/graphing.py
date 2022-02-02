@@ -82,7 +82,7 @@ def makeBoxplot(mySamplesL, fileName='boxplot.png'):
     plt.close()
 
 
-def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.arange(-5,5,0.1)):
+def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.arange(-5,5,0.1), folderName=""):
     '''Creates histograms of samples drawn from a normal distribution and a boxplot comparing all trials.
     Uses the helper functions makeBoxplot and makeHist
 
@@ -108,10 +108,18 @@ def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.a
         temp = np.random.normal(mean, sd, sampleSize)
 
         samples.append(temp)
-        makeHist(temp, binSize, ("normal" + str(i) + ".png"))
+        makeHist(temp, binSize, (folderName + "normal" + str(i) + ".png"))
 
-    makeBoxplot(samples, "cumulative_normals.png")
+    makeBoxplot(samples, (folderName + "cumulative_normals.png"))
 
 
 if __name__ == '__main__':
-    repeatRandomSamples()
+    repeatRandomSamples(folderName="original/")
+
+    repeatRandomSamples(mean=0, sd=1, sampleSize=15, folderName="2-1")
+    repeatRandomSamples(mean=0.5, sd=1, sampleSize=15, folderName="2-2")
+    repeatRandomSamples(mean=2, sd=1, sampleSize=15, folderName="2-3")
+
+    repeatRandomSamples(mean=0, sd=1, sampleSize=1000, folderName="2-4")
+    repeatRandomSamples(mean=0.5, sd=1, sampleSize=1000, folderName="2-5")
+    repeatRandomSamples(mean=2, sd=1, sampleSize=1000, folderName="2-6")
