@@ -116,10 +116,10 @@ def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.a
 if __name__ == '__main__':
     repeatRandomSamples(folderName="original/")
 
-    repeatRandomSamples(mean=0, sd=1, sampleSize=15, folderName="2-1")
-    repeatRandomSamples(mean=0.5, sd=1, sampleSize=15, folderName="2-2")
-    repeatRandomSamples(mean=2, sd=1, sampleSize=15, folderName="2-3")
+    repeatRandomSamples(mean=0, sd=1, sampleSize=15, folderName="2-1/")
+    repeatRandomSamples(mean=0.5, sd=1, sampleSize=15, folderName="2-2/")
+    repeatRandomSamples(mean=2, sd=1, sampleSize=15, folderName="2-3/")
 
-    repeatRandomSamples(mean=0, sd=1, sampleSize=1000, folderName="2-4")
-    repeatRandomSamples(mean=0.5, sd=1, sampleSize=1000, folderName="2-5")
-    repeatRandomSamples(mean=2, sd=1, sampleSize=1000, folderName="2-6")
+    repeatRandomSamples(mean=0, sd=1, sampleSize=1000, folderName="2-4/")
+    repeatRandomSamples(mean=0.5, sd=1, sampleSize=1000, folderName="2-5/")
+    repeatRandomSamples(mean=2, sd=1, sampleSize=1000, folderName="2-6/")
