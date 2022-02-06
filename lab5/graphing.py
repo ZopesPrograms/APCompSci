@@ -12,8 +12,6 @@ import os # this allows us to create new folders to hold our graphs
 if not os.path.exists('Graphs'):
     os.makedirs('Graphs')
 
-
-
 ## Creating boxplots and histograms ##
 
 # get samples
@@ -103,23 +101,26 @@ def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.a
     --
     None, but creates histograms and a boxplot
     '''
+    if not os.path.exists('Graphs/'+folderName):
+        os.makedirs('Graphs/'+folderName)
+
     samples = []
     for i in range(0,trials):
         temp = np.random.normal(mean, sd, sampleSize)
 
         samples.append(temp)
-        makeHist(temp, binSize, (folderName + "normal" + str(i) + ".png"))
+        makeHist(temp, binSize, (folderName + "/normal" + str(i) + ".png"))
 
-    makeBoxplot(samples, (folderName + "cumulative_normals.png"))
+    makeBoxplot(samples, (folderName + "/cumulative_normals.png"))
 
 
 if __name__ == '__main__':
-    repeatRandomSamples(folderName="original/")
+    repeatRandomSamples(folderName="original")
 
-    repeatRandomSamples(mean=0, sd=1, sampleSize=15, folderName="2-1/")
-    repeatRandomSamples(mean=0.5, sd=1, sampleSize=15, folderName="2-2/")
-    repeatRandomSamples(mean=2, sd=1, sampleSize=15, folderName="2-3/")
+    repeatRandomSamples(mean=0, sd=1, sampleSize=15, folderName="2-1")
+    repeatRandomSamples(mean=0.5, sd=1, sampleSize=15, folderName="2-2")
+    repeatRandomSamples(mean=2, sd=1, sampleSize=15, folderName="2-3")
 
-    repeatRandomSamples(mean=0, sd=1, sampleSize=1000, folderName="2-4/")
-    repeatRandomSamples(mean=0.5, sd=1, sampleSize=1000, folderName="2-5/")
-    repeatRandomSamples(mean=2, sd=1, sampleSize=1000, folderName="2-6/")
+    repeatRandomSamples(mean=0, sd=1, sampleSize=1000, folderName="2-4")
+    repeatRandomSamples(mean=0.5, sd=1, sampleSize=1000, folderName="2-5")
+    repeatRandomSamples(mean=2, sd=1, sampleSize=1000, folderName="2-6")
