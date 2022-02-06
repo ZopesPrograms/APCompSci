@@ -1,7 +1,7 @@
 import graphing
 import pandas as pd
 
-incomes = pd.read_csv('medIncome.csv')
+incomes = pd.read_csv('lab5/medIncome.csv')
 backup = incomes.copy()
 
 mean = 0
