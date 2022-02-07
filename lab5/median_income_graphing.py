@@ -24,7 +24,7 @@ def central_limit_histogram(incomes, samples, trials, filen, directory):
             income = incomes.sample().mean(0).to_dict()
             mean += income['x']
 
-        mean = mean / 100
+        mean = mean / trials
         sampleMeans.append(mean)
 
         print('Mean ' + str(a) + ' to: ' + str(mean))
