@@ -9,7 +9,7 @@ mean = 0
 sampleMeans = []
 
 if __name__ == '__main__':
-    print(incomes)
+    print(dict.keys(incomes))
     '''for a in range(0, 50):
         incomes = backup.copy()
         random.shuffle(incomes)
