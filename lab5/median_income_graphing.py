@@ -83,6 +83,8 @@ if __name__ == '__main__':
         perscribed by the lab 5 instructions. '''
 
     central_limit_histogram(incomes, 50, 100, 45000, 60000, 200, "normal50.png", "la_incomes_normals")
+    central_limit_histogram(incomes, 50, 100, 45000, 60000, 50, "normal50_eyesore.png", "la_incomes_normals")
+
     central_limit_histogram(incomes, 100, 100, 45000, 60000, 200, "normal100.png", "la_incomes_normals")
 
     central_limit_histogram(incomes, 500, 100, 45000, 60000, 200, "normal500.png", "la_incomes_normals")
@@ -90,3 +92,5 @@ if __name__ == '__main__':
     
     central_limit_histogram(incomes, 5000, 100, 45000, 60000, 200, "normal5000.png", "la_incomes_normals")
     central_limit_histogram(incomes, 10000, 100, 45000, 60000, 200, "normal10000.png", "la_incomes_normals")
+
+    central_limit_histogram(incomes, 10000, 100, 45000, 60000, 50, "normal10000_beauty.png", "la_incomes_normals")
