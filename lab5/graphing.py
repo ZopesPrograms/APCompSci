@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt # this allows us to create graphs
 import os # this allows us to create new folders to hold our graphs
 
 # Create a folder to hold all of your graphs
-if not os.path.exists('Graphs'):
-    os.makedirs('Graphs')
+if not os.path.exists('lab5/Graphs'):
+    os.makedirs('lab5/Graphs')
 
 ## Creating boxplots and histograms ##
 
@@ -25,13 +25,13 @@ mySamples2 = np.random.normal(mean, std, samples)
 # visualize samples
 # histograms
 plt.hist(mySamples, bins=np.arange(-4,4,0.25), density=False)
-fileName = "Graphs/Change_Me.png"
+fileName = "lab5/Graphs/Change_Me.png"
 plt.savefig(fileName)
 plt.close()
 
 # boxplots
 plt.boxplot([mySamples, mySamples2], notch=True)
-fileName = "Graphs/Change_Me2.png"
+fileName = "lab5/Graphs/Change_Me2.png"
 plt.savefig(fileName)
 plt.close()
 
@@ -58,7 +58,7 @@ def makeHist(mySamples, binSize = np.arange(-5,5,0.1), fileName='histogram.png')
 
     # Creates histogram out of samples, saves it in Graphs folder under fileName.
     plt.hist(mySamples, bins=binSize, density=True)
-    plt.savefig("Graphs/" + fileName)
+    plt.savefig("lab5/Graphs/" + fileName)
     plt.close()
 
 
@@ -78,7 +78,7 @@ def makeBoxplot(mySamplesL, fileName='boxplot.png'):
 
     # Creates boxplot out of samples, saves it in Graphs folder under fileName.
     plt.boxplot(mySamplesL, notch=True)
-    plt.savefig("Graphs/" + fileName)
+    plt.savefig("lab5/Graphs/" + fileName)
     plt.close()
 
 
@@ -109,8 +109,8 @@ def repeatRandomSamples(trials=10, mean=0, sd=1, sampleSize=1000, binSize = np.a
     ''' Creates folder by "folderName" in Graphs folder to hold 
         sample results graphs. '''
 
-    if not os.path.exists('Graphs/'+folderName):
-        os.makedirs('Graphs/'+folderName)
+    if not os.path.exists('lab5/Graphs/'+folderName):
+        os.makedirs('lab5/Graphs/'+folderName)
 
     # Randomized samples list defined here
     samples = []

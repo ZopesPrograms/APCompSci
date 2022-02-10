@@ -69,8 +69,8 @@ def central_limit_histogram(incomes, samples, trials, limit1, limit2, bin, filen
         mean = 0
 
     # Creates folder to store income histogram if it does not already exist
-    if not os.path.exists('Graphs/'+directory):
-        os.makedirs('Graphs/'+directory)
+    if not os.path.exists('lab5/Graphs/'+directory):
+        os.makedirs('lab5/Graphs/'+directory)
 
     ''' Saves histogram of collected random sample means in folder 'directory' 
         under filename 'filen.'''
