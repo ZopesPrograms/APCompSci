@@ -64,9 +64,9 @@ def central_limit_histogram(incomes, samples, trials, limit1, limit2, bin, filen
             then append it to mean list. '''
         mean = mean / trials
         sampleMeans.append(mean)
-        # Reset mean, print output for debug
-        mean = 0
+        # Print output for debug, reset mean
         print('Mean ' + str(a) + ' to: ' + str(mean))
+        mean = 0
 
     # Creates folder to store income histogram if it does not already exist
     if not os.path.exists('Graphs/'+directory):
